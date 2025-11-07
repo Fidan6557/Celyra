@@ -1,0 +1,158 @@
+/* General Styles */
+:root {
+  --bg-dark: #f5f5f5;
+  --bg-card: #5d4b4b;
+  --text-light: #160c48;
+  --gold: #d4b36a;
+  --gold-dark: #e5cc91;
+  --blue-light: #19376D; /* Qızılı ilə kontrast üçün yumşaq mavi */
+
+} 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-light);
+  background: var(--bg-dark);
+} 
+
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  border-bottom: 1px solid #fffcec;
+  background: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} 
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.contact-btn {
+  background: var(--gold);
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.3s;
+} 
+.contact-btn:hover {
+  background: var(--gold-dark);
+} 
+
+/* About Section */
+.about-section {
+  background: #1e214a;       /* Açıq fonda qalır */
+  color: #fafafa;            /* Mətn rəngi */
+  padding: 40px 0;           /* Hissənin iç boşluğu */
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  max-width: 780px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 0;
+  background: #121111;
+  color: var(--text-light);
+} 
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 18px;
+}
+
+/* Products */
+.products {
+  padding: 20px 8%; /* ↓ aralıq azaldıldı */
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Hər sətirdə 3 məhsul */
+  gap: 35px;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Telefon üçün 2 məhsul */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Kiçik ekran üçün 1 */
+  }
+}
+
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px; /* buranı dəyişməklə ölçünü idarə edirsən */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.product-card h3 {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-buy {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: var(--gold);
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+.whatsapp-buy:hover {
+  background: var(--gold-dark);
+}
+
+footer.footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #111111;
+  margin-top: 50px;
+  font-size: 14px;
+  color: var(--gold);
+} 
