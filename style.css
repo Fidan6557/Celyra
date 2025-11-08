@@ -1,158 +1,142 @@
-/* General Styles */
 :root {
-  --bg-dark: #f5f5f5;
-  --bg-card: #5d4b4b;
-  --text-light: #160c48;
-  --gold: #d4b36a;
-  --gold-dark: #e5cc91;
-  --blue-light: #19376D; /* Qızılı ilə kontrast üçün yumşaq mavi */
+  --bg: #f5f5f5;
+  --dark: #0b0b23;
+  --text: #1a1a1a;
+  --accent: #d4b36a;
+  --accent-hover: #e5cc91;
+}
 
-} 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: var(--text-light);
-  background: var(--bg-dark);
-} 
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
 
-header.header {
+/* ===== HEADER ===== */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  border-bottom: 1px solid #fffcec;
-  background: var(--bg-dark);
+  padding: 14px 6%;
+  background: var(--dark);
   position: sticky;
   top: 0;
-  z-index: 100;
-} 
-
-.logo {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  z-index: 999;
 }
+
+.logo-link {
+  color: var(--accent);
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+}
+.nav a:hover { color: var(--accent); }
 
 .contact-btn {
-  background: var(--gold);
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #000000;
-  transition: 0.3s;
-} 
-.contact-btn:hover {
-  background: var(--gold-dark);
-} 
-
-/* About Section */
-.about-section {
-  background: #1e214a;       /* Açıq fonda qalır */
-  color: #fafafa;            /* Mətn rəngi */
-  padding: 40px 0;           /* Hissənin iç boşluğu */
-  text-align: center;
-}
-
-.about-section h2 {
-  font-size: 28px;
+  background: var(--accent);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-left: 15px;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
-.about-section p {
-  max-width: 780px;
-  margin: auto;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-
-/* Hero Section */
-.hero {
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  background: #16213e;
+  color: #fafafa;
   text-align: center;
-  padding: 60px 0;
-  background: #121111;
-  color: var(--text-light);
-} 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 18px;
+  padding: 50px 8%;
 }
 
-/* Products */
+/* ===== PRODUCTS ===== */
 .products {
-  padding: 20px 8%; /* ↓ aralıq azaldıldı */
-}
-
-.products h2 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 40px;
+  padding: 50px 6%;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Hər sətirdə 3 məhsul */
-  gap: 35px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
 }
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* Telefon üçün 2 məhsul */
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* Kiçik ekran üçün 1 */
-  }
-}
-
 
 .product-card {
+  background: #fff;
+  border-radius: 12px;
   text-align: center;
+  padding: 18px;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  /* ✅ Əlavə etdiyimiz kodlar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
+/* ✅ Telefon üçün ən vacib düzəliş */
 .product-card img {
   width: 100%;
-  height: 400px; /* buranı dəyişməklə ölçünü idarə edirsən */
-  object-fit: cover;
-  border-radius: 8px;
+  height: 240px; /* ✅ Hündürlük sabitlənir */
+  object-fit: contain; /* ✅ Şəkil kəsilmir, təmiz görünür */
+  border-radius: 10px;
 }
 
 
-.product-card h3 {
-  margin-top: 15px;
-  font-weight: 500;
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 25px 8%;
+  margin-top: 50px;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+/* ===== MEDIA RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .nav {
+    display: none; /* Istəsən sonra mobil menu edərik */
+  }
+
+  .logo-link {
+    font-size: 22px;
+  }
+
+  .about-section p {
+    font-size: 14px;
+  }
+
+  .product-card {
+    padding: 14px;
+  }
 }
 
 .whatsapp-buy {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: var(--gold);
-  border-radius: 6px;
-  text-decoration: none;
-  color: #000;
+  background: var(--accent);
+  color: #000 !important;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none !important; /* ✅ Mavi xətt tam silinir */
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
   transition: 0.3s;
 }
+
 .whatsapp-buy:hover {
-  background: var(--gold-dark);
+  background: var(--accent-hover);
+  transform: translateY(-3px);
 }
 
-footer.footer {
-  text-align: center;
-  padding: 20px 0;
-  background: #111111;
-  margin-top: 50px;
-  font-size: 14px;
-  color: var(--gold);
-} 
+
