@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><b>>Celyra - Mağaza</b></title>
+  <title>Celyra - Mağaza</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ===== HEADER ===== -->
   <header class="header">
-    <div class="logo">Celyra</div>
-    <a class="contact-btn" href="https://wa.me/994554709700" target="_blank">Bizimlə Əlaqə</a>
+    <div class="logo">
+      <a href="#" class="logo-link">Celyra</a>
+    </div>
+    <nav class="nav">
+      <a href="#about">Haqqımızda</a>
+      <a href="#products">Məhsullar</a>
+      <a href="https://wa.me/994554709700" target="_blank" class="contact-btn">Bizimlə Əlaqə</a>
+    </nav>
   </header>
 
+  <!-- ===== ABOUT SECTION ===== -->
   <section id="about" class="about-section">
-
     <h2>Haqqımızda</h2>
     <p>
       Celyra — Alman istehsalı olan orijinal və sertifikatlı məhsullar təqdim edən mağazadır.
@@ -22,49 +29,51 @@
     </p>
   </section>
 
-  
-
-  <section class="products">
+  <!-- ===== PRODUCTS ===== -->
+  <section id="products" class="products">
     <h2>Məhsullar</h2>
 
     <div class="product-grid">
 
-      <!-- 1-ci Məhsul -->
       <div class="product-card">
         <img src="Descaler.jpg" alt="Descaler" />
         <h3>Descaler - Kalk Təmizləyici</h3>
         <p>10 AZN</p>
         <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20bu%20məhsulu%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
+
       </div>
 
-      <!-- 2-ci Məhsul -->
       <div class="product-card">
         <img src="derman.jpg" alt="Məhsul 2" />
-        <h3>Məhsul Adı</h3>
-        <p>XX AZN</p>
-        <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20bu%20məhsulu%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
+        <h3>Təmizləmə Tabletləri</h3>
+        <p>12 AZN</p>
+        <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20Təmizləmə%20Tabletlərini%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
       </div>
-
 
       <div class="product-card">
         <img src="nese.jpg" alt="Maşın Təmizləyici" />
         <h3>Maşın Təmizləyici</h3>
         <p>15 AZN</p>
-        <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20Maşın%20Təmizləyicini%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
-    
+        <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20Maşın%20Təmizləyicisini%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
       </div>
-
 
       <div class="product-card">
-        <img src="paltar.jpg" alt="Maşın Təmizləyici" />
-        <h3>Maşın Təmizləyici</h3>
-        <p>15 AZN</p>
-        <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20Maşın%20Təmizləyicini%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
-    
+        <img src="paltar.jpg" alt="Paltar Təmizləyici" />
+        <h3>Paltar Təmizləyici</h3>
+        <p>20 AZN</p>
+        <a class="whatsapp-buy" href="https://wa.me/994554709700?text=Salam,%20Paltar%20Təmizləyicisini%20sifariş%20etmək%20istəyirəm ✅" target="_blank">Sifariş Et</a>
       </div>
+
+    </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
+    <div class="footer-links">
+      <a href="#about">Haqqımızda</a>
+      <a href="#products">Məhsullar</a>
+      <a href="https://wa.me/994554709700" target="_blank">Əlaqə</a>
+    </div>
     <p>Celyra © 2025 - Bütün hüquqlar qorunur</p>
   </footer>
 
